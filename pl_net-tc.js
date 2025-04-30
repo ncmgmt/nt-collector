@@ -91,8 +91,9 @@ const themeVariables = new Set(),
 	.then((response) => {
 		if (!response.ok)
 			throw new Error(
-				Failed to fetch stylesheet: ${response.statusText}
-			);
+    `Failed to fetch stylesheet: ${response.statusText}`
+);
+
 		return response.text();
 	})
 	.then((cssText) => {
