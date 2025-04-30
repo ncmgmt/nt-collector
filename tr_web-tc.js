@@ -76,7 +76,7 @@ function getColorThemes() {
   fetch(firstLink.href)
     .then((response) => {
       if (!response.ok)
-        throw new Error(Failed to fetch stylesheet: ${response.statusText});
+        throw new Error(`Failed to fetch stylesheet: ${response.statusText}`);
       return response.text();
     })
     .then((cssText) => {
@@ -134,5 +134,3 @@ function getColorThemes() {
 window.addEventListener("DOMContentLoaded", (event) => {
   getColorThemes();
 });
-
-
